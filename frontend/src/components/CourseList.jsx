@@ -113,7 +113,7 @@ export default function CourseList({ refreshKey }) {
 
       {loading ? (
         <p className="status-message">Chargement des cours...</p>
-      ) : courses.length === 0 ? (
+      ) : !error && courses.length === 0 ? (
         <p className="status-message">Aucun cours trouvé.</p>
       ) : (
         <div className="course-grid">
