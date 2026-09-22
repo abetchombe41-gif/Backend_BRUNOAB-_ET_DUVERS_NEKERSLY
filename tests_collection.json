@@ -7,7 +7,7 @@
   "requests": [
     {
       "name": "01. Auth - Inscription Nouvel Étudiant",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3000/api/auth/register",
       "method": "POST",
       "body": {
         "type": "json",
@@ -16,7 +16,7 @@
     },
     {
       "name": "02. Auth - Connexion Formateur de Test",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3000/api/auth/login",
       "method": "POST",
       "body": {
         "type": "json",
@@ -25,7 +25,7 @@
     },
     {
       "name": "03. Sécurité - Tenter de créer un cours sans être connecté (Devrait faire un 401)",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3000/api/courses",
       "method": "POST",
       "body": {
         "type": "json",
@@ -34,7 +34,7 @@
     },
     {
       "name": "04. CRUD - Créer un cours légitime (🔒 Formateur connecté)",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3000/api/courses",
       "method": "POST",
       "headers": [
         { "name": "Authorization", "value": "Bearer <COLLER_LE_TOKEN_DU_FORMATEUR_ICI>" }
@@ -46,7 +46,7 @@
     },
     {
       "name": "05. Axios - Générer automatiquement un quiz mondial",
-      "url": "http://localhost:3000",
+      "url": "http://localhost:3000/api/lessons/<COLLER_ID_D_UNE_LECON_ICI>/quiz",
       "method": "POST",
       "headers": [
         { "name": "Authorization", "value": "Bearer <COLLER_LE_TOKEN_DU_FORMATEUR_ICI>" }
